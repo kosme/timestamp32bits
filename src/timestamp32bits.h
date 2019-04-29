@@ -28,10 +28,12 @@
 class timestamp32bits{
 public:
   timestamp32bits(void);
+  timestamp32bits(uint16_t epoch_year);
   unsigned long timestamp(char year, char month, char day, char hour, char min, char seg);
 
 private:
-  const short days[12]={0,31,59,90,120,151,181,212,243,273,304,334};
+  const short _days[12]={0,31,59,90,120,151,181,212,243,273,304,334};
+  signed char _offset = 30;
 };
 
 #endif

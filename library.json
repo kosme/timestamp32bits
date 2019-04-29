@@ -1,7 +1,7 @@
 {
   "name": "timestamp32bits",
   "keywords": "timestamp, UNIX, time, date",
-  "description": "A library for calculating UNIX-like timestamps for dates AFTER January 1, 1970",
+  "description": "A library for calculating UNIX-like timestamps for dates AFTER January 1, 1970 or January 1 of whichever year is selected as EPOCH.",
   "repository":
   {
     "type": "git",
@@ -15,7 +15,7 @@
       "maintainer": true
     }
   ],
-  "version": "1.0",
+  "version": "1.1",
   "frameworks": ["arduino","mbed","espidf"],
   "platforms": "*"
 }

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018, Enrique Condes
+ * Copyright (c) 2019, Enrique Condes
  *
  * All rights reserved.
  *
@@ -25,22 +25,27 @@
  *
  */
 
-/*
-Simple example that generates a timestamp from the information provided.
-*/
+ /*
+ Simple example that generates a custom timestamp from the information provided.
+ The customization of the timestamp consists in being able to stablish the year
+ that will be used as EPOCH. The custom timestamp is INCOMPATIBLE with the
+ standard implementation of Linux timestamp. The advantage of a custom timestamp
+ is that by moving the epoch closer to the current year, it allows to store dates
+ beyond January 19, 2038.
+ */
 
-#include "timestamp32bits.h"
+ #include "timestamp32bits.h"
 
-timestamp32bits stamp = timestamp32bits();
+ timestamp32bits stamp = timestamp32bits(2000);
 
-void setup() {
-  Serial.begin(115200);
-  //timestamp paramaters order is (year, month, day, hour, minute, second)
-  Serial.println(stamp.timestamp(18,10,11,11,22,33)); //It should print 1539256953
-  while(1);
-}
+ void setup() {
+   Serial.begin(115200);
+   //timestamp paramaters order is (year, month, day, hour, minute, second)
+   Serial.println(stamp.timestamp(19,11,07,11,22,33)); //It should print 626440953
+   while(1);
+ }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+ void loop() {
+   // put your main code here, to run repeatedly:
 
-}
+ }
