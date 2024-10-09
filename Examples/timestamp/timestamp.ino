@@ -35,7 +35,7 @@ timestamp32bits stamp = timestamp32bits();
 
 void setup() {
   Serial.begin(115200);
-  //timestamp paramaters order is (year, month, day, hour, minute, second)
+  //timestamp parameters order is (year, month, day, hour, minute, second)
   Serial.println(stamp.timestamp(18,10,11,11,22,33)); //It should print 1539256953
   while(1);
 }

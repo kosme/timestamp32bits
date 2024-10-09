@@ -40,7 +40,7 @@
 
  void setup() {
    Serial.begin(115200);
-   //timestamp paramaters order is (year, month, day, hour, minute, second)
+   //timestamp parameters order is (year, month, day, hour, minute, second)
    Serial.println(stamp.timestamp(19,11,07,11,22,33)); //It should print 626440953
    while(1);
  }

@@ -1,5 +1,5 @@
 /*
-        32 bits timestamp libray
+        32 bits timestamp library
         Copyright (C) 2018 Enrique Condes
 */
 
